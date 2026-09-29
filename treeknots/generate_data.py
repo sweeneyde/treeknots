@@ -12,17 +12,19 @@ from .generate_word_pairs import (
 from .moves import (
     all_moves_no_reflections,
     all_moves_with_reflections,
+    quick_test_maximality,
 )
 
 def partition_basic(word_pairs, **_):
     result = defaultdict(list)
-    for x in tqdm(word_pairs):
+    for x in tqdm(list(word_pairs)):
         L = TreePair(*x.split(" / ")).get_link()
         result[str(L.homfly_polynomial())].append(x)
     return result
 
 def partition_using_moves(word_pairs, moves):
     # Union-find data structure
+    word_pairs = list(word_pairs)
     parent = {x: x for x in word_pairs}
     size = {x: 1 for x in word_pairs}
     def find(x):
@@ -77,6 +79,28 @@ def partition_using_moves(word_pairs, moves):
 
     return result
 
+def homfly_worker(x : str):
+    tp = TreePair(*x.split(" / "))
+    L = tp.get_link()
+    h = str(L.homfly_polynomial())
+    return x, h
+
+def construct_one_example_each(word_pairs, **_):
+    result = {}
+    def iterator():
+        yield "o / o"
+        for x in tqdm(word_pairs):
+            tp = TreePair(*x.split(" / "))
+            if quick_test_maximality(tp):
+                yield x
+    import multiprocessing as mp
+    mp.set_start_method("spawn")
+    with mp.Pool(8) as pool:
+        for x, h in pool.imap_unordered(homfly_worker, iterator()):
+            if h not in result or len(x) < len(result[h]) or (len(x) == len(h) and x > result[h]):
+                result[h] = x
+    return {h: [x] for h, x in result.items()}
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(prog="generate data",
@@ -94,18 +118,26 @@ def main():
     parser.add_argument("-r",
                         help="set this flag to allow moves that reflect",
                         action="store_true")
+    parser.add_argument("--sample",
+                        help="set this flag to produce only one per",
+                        action="store_true")
     args = parser.parse_args()
+    if args.r:
+        assert args.m
+    if args.sample and args.m:
+        raise ValueError()
+    if args.sample:
+        args.p = True
+
     word_pairs_func = prime_word_pairs_up_to if args.p else all_word_pairs_up_to
     word_pairs = word_pairs_func(args.n)
     if args.o:
-        word_pairs = [wordpair
+        word_pairs = (wordpair
                       for wordpair in word_pairs
-                      if len(TreePair(*wordpair.split(" / ")).oriented_gauss_code()[0]) == 1
-                      ]
-    else:
-        word_pairs = list(word_pairs)
-
-    partition_func = partition_using_moves if args.m else partition_basic
+                      if len(TreePair(*wordpair.split(" / ")).oriented_gauss_code()[0]) == 1)
+    partition_func = (partition_using_moves if args.m
+                      else construct_one_example_each if args.sample
+                      else partition_basic)
     moves = all_moves_with_reflections if args.r else all_moves_no_reflections
 
     result_dd = partition_func(word_pairs, moves=moves)
@@ -117,9 +149,11 @@ def main():
     result.sort(key=lambda kv: (len(kv[1]), len(kv[0]), kv[0], kv[1]))
 
     tags = ""
-    for tag in "mopr":
+    for tag in "ompr":
         if getattr(args, tag):
             tags += tag
+    if args.sample:
+        tags += "_sample"
     filename = f"treepairs{args.n}{tags}.txt.gz"
     path = Path(__file__).parent.parent / "data" / filename
     with gzip.open(path, 'wt', encoding='ascii') as f:
@@ -130,7 +164,7 @@ def main():
 
     print(f"wrote to {path}")
 
-    if args.n == 7 and args.o and args.p and not args.m:
+    if args.n == 7 and args.p and not args.m and not args.sample:
         new_path = path.parent / "known_unknots.txt.gz"
         [arr] = [arr for (k, arr) in result if k == "1"]
         with gzip.open(new_path, "wt", encoding="ascii") as f:

@@ -7,6 +7,7 @@ KNOWN_TRIVIAL_WORD_PAIR_SET = None
 def is_known_trivial_word_pair(word1, word2):
     global KNOWN_TRIVIAL_WORD_PAIR_SET
     if KNOWN_TRIVIAL_WORD_PAIR_SET is None:
+        print("loading known unknots...")
         path = Path(__file__).parent.parent / "data" / "known_unknots.txt.gz"
         with gzip.open(path, "rt", encoding="ascii") as f:
             KNOWN_TRIVIAL_WORD_PAIR_SET = set(f.read().splitlines())
@@ -340,6 +341,13 @@ MOVES = [
     local_move_3,
     local_move_4,
     local_move_5,
+]
+
+SHRINKING_MOVES = [
+    global_move_2,
+    local_move_1,
+    local_move_2,
+    local_move_3,
     local_move_5,
 ]
 
@@ -350,9 +358,7 @@ def all_moves_with_reflections(tp):
     for moves in MOVES:
         yield from moves(tp)
 
-def all_moves_no_reflections(tp):
-    yield mirror_left_right(mirror_across_trees(tp))
-    yield from subsquare_moves(tp)
+def _moves_no_reflections(tp, moves_list):
     # So we only have to write each move once,
     # we will apply reflections as long as we promise
     # to reflect back afterwards.
@@ -360,9 +366,26 @@ def all_moves_no_reflections(tp):
                         mirror_across_trees,
                         mirror_left_right]:
         tp0 = reflection(tp)
-        for moves in MOVES:
+        for moves in moves_list:
             for tp1 in moves(tp0):
                 yield reflection(tp1)
+
+def all_moves_no_reflections(tp):
+    yield mirror_left_right(mirror_across_trees(tp))
+    yield from subsquare_moves(tp)
+    yield from _moves_no_reflections(tp, MOVES)
+
+def quick_test_maximality(tp):
+    for _ in _moves_no_reflections(tp, SHRINKING_MOVES):
+        return False
+    symmetries = [tp, mirror_across_trees(tp)]
+    symmetries += list(map(mirror_left_right, symmetries))
+    w = str(tp)
+    return (
+        w >= str(tp1 := mirror_across_trees(tp))
+        and w >= str(mirror_left_right(tp))
+        and w >= str(mirror_left_right(tp1))
+    )
 
 if __name__ == "__main__":
     import doctest

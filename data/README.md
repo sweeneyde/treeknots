@@ -11,3 +11,5 @@ The filenames have the form `treepairs(NUM)(o?)(p?)(m?)(r?).txt.gz`:
     tree-pairs together with a set of known moves first, then only computing invariants
     for one tree-pair from each component.
 - The flag `r` indicates that reflections were among the allowed moves.
+- If `_sample` is appended then only one representative tree-pair
+    is listed per homfly polynomial.
