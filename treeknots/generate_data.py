@@ -15,16 +15,69 @@ from .moves import (
     quick_test_maximality,
 )
 
-def partition_basic(word_pairs, **_):
+def homfly_worker_basic(x : str):
+    tp = TreePair(*x.split(" / "))
+    L = tp.get_link()
+    h = str(L.homfly_polynomial())
+    return x, h
+
+def homfly_worker_sample(x: str):
+    tp = TreePair(*x.split(" / "))
+    if quick_test_maximality(tp):
+        return x, None
+    L = tp.get_link()
+    h = str(L.homfly_polynomial())
+    return x, h
+
+def homfly_worker_one_component(x: str):
+    from sage.all import Link as sage_Link
+    # Snappy might remove unlinked unknots; only trust it if we have a knot already.
+    import snappy
+    tp = TreePair(*x.split(" / "))
+    gc, signs = tp.oriented_gauss_code()
+    if len(gc) != 1:
+        return x, None
+    pd = sage_Link([gc, signs]).pd_code()
+    sL = snappy.Link(pd)
+    sL.simplify("basic")
+    L1 = sage_Link([[x+1 for x in tup] for tup in sL.PD_code()])
+    h = str(L1.homfly_polynomial())
+    return x, h
+
+def homfly_worker_sample_one_component(x: str):
+    from sage.all import Link as sage_Link
+    # Snappy might remove unlinked unknots; only trust it if we have a knot already.
+    import snappy
+    tp = TreePair(*x.split(" / "))
+    if not quick_test_maximality(tp):
+        return x, None
+    gc, signs = tp.oriented_gauss_code()
+    if len(gc) != 1:
+        # ignore 
+        return x, None
+    pd = sage_Link([gc, signs]).pd_code()
+    sL = snappy.Link(pd)
+    sL.simplify("basic")
+    L1 = sage_Link([[x+1 for x in tup] for tup in sL.PD_code()])
+    h = str(L1.homfly_polynomial())
+    return x, h
+
+def partition_basic(word_pairs, *, homfly_worker, **_):
     result = defaultdict(list)
     for x in tqdm(list(word_pairs)):
-        L = TreePair(*x.split(" / ")).get_link()
-        result[str(L.homfly_polynomial())].append(x)
+        _, h = homfly_worker(x)
+        if h is None:
+            continue
+        result[h].append(x)
     return result
 
-def partition_using_moves(word_pairs, moves):
-    # Union-find data structure
-    word_pairs = list(word_pairs)
+def partition_using_moves(word_pairs, moves, *, homfly_worker):
+    if homfly_worker is homfly_worker_one_component:
+        word_pairs = [wordpair
+                      for wordpair in word_pairs
+                      if len(TreePair(*wordpair.split(" / ")).oriented_gauss_code()[0]) == 1]
+    else:
+        word_pairs = list(word_pairs)
     parent = {x: x for x in word_pairs}
     size = {x: 1 for x in word_pairs}
     def find(x):
@@ -72,31 +125,29 @@ def partition_using_moves(word_pairs, moves):
 
     result = defaultdict(list)
     for bin in tqdm(bins, "calc on each bin"):
-        rep = min(bin, key=lambda x: (len(x), x))
-        L = TreePair(*rep.split(" / ")).get_link()
-        p = str(L.homfly_polynomial())
-        result[p].extend(bin)
+        x = min(bin, key=lambda x: (len(x), x))
+        _, h = homfly_worker(x)
+        assert h is not None
+        result[h].extend(bin)
 
     return result
 
-def homfly_worker(x : str):
-    tp = TreePair(*x.split(" / "))
-    L = tp.get_link()
-    h = str(L.homfly_polynomial())
-    return x, h
-
-def construct_one_example_each(word_pairs, **_):
+def construct_one_example_each(word_pairs, *, homfly_worker, **_):
     result = {}
+    if homfly_worker is homfly_worker_basic:
+        homfly_worker = homfly_worker_sample
+    else:
+        assert homfly_worker is homfly_worker_one_component
+        homfly_worker = homfly_worker_sample_one_component
     def iterator():
         yield "o / o"
-        for x in tqdm(word_pairs):
-            tp = TreePair(*x.split(" / "))
-            if quick_test_maximality(tp):
-                yield x
+        yield from word_pairs
     import multiprocessing as mp
     mp.set_start_method("spawn")
-    with mp.Pool(8) as pool:
-        for x, h in pool.imap_unordered(homfly_worker, iterator()):
+    with mp.Pool(12) as pool:
+        for x, h in tqdm(pool.imap_unordered(homfly_worker, iterator(), chunksize=100)):
+            if h is None:
+                continue
             if h not in result or len(x) < len(result[h]) or (len(x) == len(h) and x > result[h]):
                 result[h] = x
     return {h: [x] for h, x in result.items()}
@@ -132,15 +183,15 @@ def main():
     word_pairs_func = prime_word_pairs_up_to if args.p else all_word_pairs_up_to
     word_pairs = word_pairs_func(args.n)
     if args.o:
-        word_pairs = (wordpair
-                      for wordpair in word_pairs
-                      if len(TreePair(*wordpair.split(" / ")).oriented_gauss_code()[0]) == 1)
+        homfly_worker = homfly_worker_one_component
+    else:
+        homfly_worker = homfly_worker_basic
     partition_func = (partition_using_moves if args.m
                       else construct_one_example_each if args.sample
                       else partition_basic)
     moves = all_moves_with_reflections if args.r else all_moves_no_reflections
 
-    result_dd = partition_func(word_pairs, moves=moves)
+    result_dd = partition_func(word_pairs, moves=moves, homfly_worker=homfly_worker)
 
     result = list(result_dd.items())
     for k, arr in result:
