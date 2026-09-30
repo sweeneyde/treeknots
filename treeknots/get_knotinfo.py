@@ -95,7 +95,7 @@ def prime_knots_summary(data_filepath):
         leaves = rep.count("o") // 2
         results_by_num_leaves[leaves].append((knotinfo, rep))
 
-    with open(data_filepath.parent / f"prime_{title.lower()}s_summary.md", "w") as f:
+    with open(data_filepath.parent.parent / f"prime_{title.lower()}s_summary.md", "w") as f:
         print(f"# Prime {title}s from Small Tree-Pairs", file=f)
         print(file=f)
         print(f"Generated using treeknots.get_knotinfo from {data_filepath.name}", file=f)
