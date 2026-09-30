@@ -103,8 +103,12 @@ def prime_knots_summary(data_filepath):
                 return (int(a.strip("n")), a, int(b), knotinfo)
             arr.sort(key=lambda kv: sortkey(kv[0]))
             print(file=f)
-            print("<details>", file=f)
-            print(f"<summary>Prime Knots Requiring {num_leaves} leaves</summary>", file=f)
+            drop_down = len(arr) > 10
+            if drop_down:
+                print("<details>", file=f)
+                print(f"<summary>Prime Knots Requiring {num_leaves} leaves</summary>", file=f)
+            else:
+                print(f"Prime Knots Requiring {num_leaves} leaves:", file=f)
             print(file=f)
             print("```", file=f)
             for knotinfo, rep in arr:
@@ -113,7 +117,8 @@ def prime_knots_summary(data_filepath):
                 else:
                     print(f"{knotinfo}:\t{rep}", file=f)
             print("```", file=f)
-            print("</details>", file=f)
+            if drop_down:
+                print("</details>", file=f)
 
 if __name__ == "__main__":
     [path] = sys.argv[1:]
