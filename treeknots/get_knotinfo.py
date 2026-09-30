@@ -16,7 +16,7 @@ def get_name_from_wordpair(x: str):
 
     import snappy
     sL = snappy.Link(L.pd_code())
-    sL.simplify("basic")
+    sL.simplify("global")
     L = sage_Link([[x+1 for x in tup] for tup in sL.PD_code()])
     if L.number_of_components() < len(gc):
         # Had unlinked unknots that got removed
