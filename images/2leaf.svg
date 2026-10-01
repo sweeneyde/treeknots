@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="350.0" height="500.0" viewBox="0 0 350.0 500.0">
+     width="105.0" height="150.0" viewBox="0 0 105.0 150.0">
 <defs>
 </defs>
-<path d="M75.0,200.0 L75.0,300.0" stroke="blue" stroke-width="25.0" />
-<path d="M275.0,200.0 L275.0,300.0" stroke="blue" stroke-width="25.0" />
-<path d="M75.0,200.0 L75.0,140.0 L115.0,100.0 L235.0,100.0 L275.0,140.0 L275.0,200.0" stroke="blue" stroke-width="25.0" fill="none" />
-<path d="M175.0,130.0 L175.0,160.0 L175.0,140.0 L175.0,360.0 L175.0,340.0 L175.0,370.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
-<path d="M75.0,300.0 L75.0,360.0 L115.0,400.0 L235.0,400.0 L275.0,360.0 L275.0,300.0" stroke="blue" stroke-width="25.0" fill="none" />
-<path d="M175.0,70.0 L175.0,-50.0" stroke="red" stroke-width="25.0" fill="none" />
-<path d="M175.0,430.0 L175.0,550.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M22.5,60.0 L22.5,90.0" stroke="blue" stroke-width="7.5" />
+<path d="M82.5,60.0 L82.5,90.0" stroke="blue" stroke-width="7.5" />
+<path d="M22.5,60.0 L22.5,42.0 L34.5,30.0 L70.5,30.0 L82.5,42.0 L82.5,60.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M52.5,39.0 L52.5,48.0 L52.5,42.0 L52.5,108.0 L52.5,102.0 L52.5,111.0" stroke="red" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M22.5,90.0 L22.5,108.0 L34.5,120.0 L70.5,120.0 L82.5,108.0 L82.5,90.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M52.5,21.0 L52.5,-15.0" stroke="red" stroke-width="7.5" fill="none" />
+<path d="M52.5,129.0 L52.5,165.0" stroke="red" stroke-width="7.5" fill="none" />
 </svg>

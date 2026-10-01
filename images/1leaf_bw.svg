@@ -3,6 +3,5 @@
      width="45.0" height="90.0" viewBox="0 0 45.0 90.0">
 <defs>
 </defs>
-<circle cx="22.5" cy="30.0" r="7.5" fill="black" />
-<circle cx="22.5" cy="60.0" r="7.5" fill="black" />
+<path d="M22.5,-15.0 L22.5,75.0" stroke="black" stroke-width="7.5" fill="none" />
 </svg>

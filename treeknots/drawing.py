@@ -47,7 +47,7 @@ def assign_components(tp: TreePair):
             assignment[v, sign] = color
     return assignment
 
-DIST = 100
+DIST = 30
 SLOPE = 1.0
 IMAGE_MARGIN = 0.75 * DIST
 LEAF_SEP = 0.5 * DIST
@@ -64,10 +64,16 @@ def draw_treepair(
     *,
     filename=None,
     colors=("blue", "red", "green", "purple"),
+    extra_arc_color=None
 ):
     n = tp.tree1.to_word().count("o")
     if filename is None:
         filename = str(tp).replace(" / ", "-")
+    outpath = (
+        Path(__file__).parent.parent
+        / "images"
+        / f"{filename}.svg"
+    )
     top_verices_list = list(tp.tree1.in_order_vertices())
     top_vertices = set(top_verices_list)
     width = IMAGE_MARGIN+DIST*2*(n-1)+IMAGE_MARGIN
@@ -92,6 +98,21 @@ def draw_treepair(
 
     import drawsvg as draw
     d = draw.Drawing(width=width, height=height)
+
+    if n == 1:
+        x1, y1 = n2p[tp.tree1]
+        x2, y2 = n2p[tp.tree1]
+        d.append(draw.Line(
+            x1, y1 - OUTER_SEGMENT,
+            x2, y2 + OUTER_SEGMENT,
+            stroke=colors[0],
+            stroke_width=STROKE_WIDTH,
+            fill='none',
+        ))
+        d.save_svg(outpath)
+        print(f"{filename} ok")
+        return
+
     for v, (x, y) in n2p.items():
         if v.is_leaf():
             if v in top_vertices:
@@ -107,7 +128,6 @@ def draw_treepair(
                 ))
         else:
             over_color = colors[components[v, +1]]
-            under_color = colors[components[v, -1]]
             lx, ly = n2p[v.left]
             rx, ry = n2p[v.right]
             plane = 1 if v in top_vertices else -1
@@ -124,6 +144,9 @@ def draw_treepair(
                 fill='none',
             ))
         if not v.is_leaf() and v in top_vertices:
+            under_color = colors[components[v, -1]]
+            if extra_arc_color is not None:
+                under_color = extra_arc_color
             mx, my = midleaf_position[v]
             x1, y1 = n2p[v.corresponding]
             d.append(draw.Lines(
@@ -137,13 +160,13 @@ def draw_treepair(
                 stroke_width=STROKE_WIDTH,
                 close=False,
                 fill='none',
-                stroke_dasharray="30,10",
+                stroke_dasharray="20,10",
             ))
     x, y = n2p[tp.tree1]
     d.append(draw.Line(
         x, y - GAP,
         x, y - OUTER_SEGMENT,
-        stroke=colors[0] if tp.tree1.is_leaf() else colors[components[tp.tree1, -1]],
+        stroke=colors[components[tp.tree1, -1]],
         stroke_width=STROKE_WIDTH,
         fill='none',
     ))
@@ -151,16 +174,12 @@ def draw_treepair(
     d.append(draw.Line(
         x, y + GAP,
         x, y + OUTER_SEGMENT,
-        stroke=colors[0] if tp.tree2.is_leaf() else colors[components[tp.tree2, -1]],
+        stroke=colors[components[tp.tree2, -1]],
         stroke_width=STROKE_WIDTH,
         fill='none',
     ))
 
-    d.save_svg(
-        Path(__file__).parent.parent
-        / "images"
-        / f"{filename}.svg"
-    )
+    d.save_svg(outpath)
     print(f"{filename} ok")
 
 
@@ -204,16 +223,19 @@ def draw_treepair_trees_only(
     d.save_svg(
         Path(__file__).parent.parent
         / "images"
-        / f"{filename}_trees.svg"
+        / f"{filename}.svg"
     )
     print(f"{filename} ok")
 
 
 def main():
-    def draw(filename, word1, word2, **kwargs):
+    def draw(filename, word1, word2):
         tp = TreePair(word1, word2)
-        draw_treepair_trees_only(tp, filename=filename)
-        draw_treepair(tp, filename=filename, **kwargs)
+        draw_treepair_trees_only(tp, filename=filename+"_trees")
+        draw_treepair(tp, filename=filename)
+        draw_treepair(tp, filename=filename+"_bw",
+                      colors=("black",)*4,
+                      extra_arc_color="darkgrey")
     draw("1leaf",
          "o",
          "o")

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="350.0" height="500.0" viewBox="0 0 350.0 500.0">
+     width="105.0" height="150.0" viewBox="0 0 105.0 150.0">
 <defs>
 </defs>
-<circle cx="75.0" cy="200.0" r="25.0" fill="black" />
-<circle cx="275.0" cy="200.0" r="25.0" fill="black" />
-<path d="M75.0,200.0 L175.0,100.0 L275.0,200.0" stroke="black" stroke-width="25.0" fill="none" />
-<circle cx="75.0" cy="300.0" r="25.0" fill="black" />
-<circle cx="275.0" cy="300.0" r="25.0" fill="black" />
-<path d="M75.0,300.0 L175.0,400.0 L275.0,300.0" stroke="black" stroke-width="25.0" fill="none" />
+<circle cx="22.5" cy="60.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="60.0" r="7.5" fill="black" />
+<path d="M22.5,60.0 L52.5,30.0 L82.5,60.0" stroke="black" stroke-width="7.5" fill="none" />
+<circle cx="22.5" cy="90.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="90.0" r="7.5" fill="black" />
+<path d="M22.5,90.0 L52.5,120.0 L82.5,90.0" stroke="black" stroke-width="7.5" fill="none" />
 </svg>

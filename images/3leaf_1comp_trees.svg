@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="550.0" height="700.0" viewBox="0 0 550.0 700.0">
+     width="165.0" height="210.0" viewBox="0 0 165.0 210.0">
 <defs>
 </defs>
-<circle cx="75.0" cy="300.0" r="25.0" fill="black" />
-<circle cx="275.0" cy="300.0" r="25.0" fill="black" />
-<circle cx="475.0" cy="300.0" r="25.0" fill="black" />
-<path d="M275.0,300.0 L375.0,200.0 L475.0,300.0" stroke="black" stroke-width="25.0" fill="none" />
-<path d="M75.0,300.0 L275.0,100.0 L375.0,200.0" stroke="black" stroke-width="25.0" fill="none" />
-<circle cx="75.0" cy="400.0" r="25.0" fill="black" />
-<circle cx="275.0" cy="400.0" r="25.0" fill="black" />
-<circle cx="475.0" cy="400.0" r="25.0" fill="black" />
-<path d="M75.0,400.0 L175.0,500.0 L275.0,400.0" stroke="black" stroke-width="25.0" fill="none" />
-<path d="M175.0,500.0 L275.0,600.0 L475.0,400.0" stroke="black" stroke-width="25.0" fill="none" />
+<circle cx="22.5" cy="90.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="90.0" r="7.5" fill="black" />
+<circle cx="142.5" cy="90.0" r="7.5" fill="black" />
+<path d="M82.5,90.0 L112.5,60.0 L142.5,90.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M22.5,90.0 L82.5,30.0 L112.5,60.0" stroke="black" stroke-width="7.5" fill="none" />
+<circle cx="22.5" cy="120.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="120.0" r="7.5" fill="black" />
+<circle cx="142.5" cy="120.0" r="7.5" fill="black" />
+<path d="M22.5,120.0 L52.5,150.0 L82.5,120.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M52.5,150.0 L82.5,180.0 L142.5,120.0" stroke="black" stroke-width="7.5" fill="none" />
 </svg>
