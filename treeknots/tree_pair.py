@@ -146,17 +146,7 @@ class TreePair:
     def to_words(self):
         return (self.tree1.to_word(), self.tree2.to_word())
 
-    def oriented_gauss_code(self):
-        """
-        >>> tp = TreePair("(o(o((oo)o)))", "(((oo)o)(oo))")
-        >>> ((comp1, comp2), signs) = tp.oriented_gauss_code()
-        >>> comp1
-        [1, 5, 2, -4, -8, 7, -6, -2]
-        >>> comp2
-        [-1, -7, -3, 4, 8, 3, 6, -5]
-        >>> signs
-        [-1, 1, -1, -1, 1, -1, -1, 1]
-        """
+    def oriented_gauss_code_and_label_to_vertex(self):
         tree1, tree2 = self.tree1, self.tree2
         LEFT, RIGHT, CORRESPONDING, PARENT = object(), object(), object(), object()
         vertices1 = list(tree1.in_order_vertices())
@@ -197,6 +187,7 @@ class TreePair:
             if not v.is_leaf():
                 label = len(vertex_to_label) + 1
                 vertex_to_label[v] = label
+        label_to_vertex = {lbl: v for v, lbl in vertex_to_label.items()}
 
         OVER, UNDER = +1, -1
         DIRECTON_TO_OVER_UNDER = {
@@ -239,7 +230,24 @@ class TreePair:
             if v in bottom_halfplane:
                 sign = -sign
             crossing_signs.append(sign)
-        return [gauss_components, crossing_signs]
+        return (
+            [gauss_components, crossing_signs],
+            label_to_vertex
+        )
+
+    def oriented_gauss_code(self):
+        """
+        >>> tp = TreePair("(o(o((oo)o)))", "(((oo)o)(oo))")
+        >>> ((comp1, comp2), signs) = tp.oriented_gauss_code()
+        >>> comp1
+        [1, 5, 2, -4, -8, 7, -6, -2]
+        >>> comp2
+        [-1, -7, -3, 4, 8, 3, 6, -5]
+        >>> signs
+        [-1, 1, -1, -1, 1, -1, -1, 1]
+        """
+        return self.oriented_gauss_code_and_label_to_vertex()[0]
+
 
     def get_link(self):
         from sage.all import Link

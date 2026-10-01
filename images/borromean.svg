@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1750.0" height="1900.0" viewBox="0 0 1750.0 1900.0">
+<defs>
+</defs>
+<path d="M75.0,900.0 L75.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M275.0,900.0 L275.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M475.0,900.0 L475.0,1000.0" stroke="green" stroke-width="25.0" />
+<path d="M675.0,900.0 L675.0,1000.0" stroke="green" stroke-width="25.0" />
+<path d="M875.0,900.0 L875.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M1075.0,900.0 L1075.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M1275.0,900.0 L1275.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M1475.0,900.0 L1475.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M1675.0,900.0 L1675.0,1000.0" stroke="blue" stroke-width="25.0" />
+<path d="M875.0,900.0 L875.0,840.0 L915.0,800.0 L1035.0,800.0 L1075.0,840.0 L1075.0,900.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M975.0,830.0 L975.0,860.0 L975.0,840.0 L975.0,1060.0 L675.0,1540.0 L675.0,1570.0" stroke="green" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M1275.0,900.0 L1275.0,840.0 L1315.0,800.0 L1435.0,800.0 L1475.0,840.0 L1475.0,900.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M1375.0,830.0 L1375.0,860.0 L1375.0,840.0 L1375.0,1060.0 L875.0,1740.0 L875.0,1770.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M675.0,900.0 L675.0,840.0 L815.0,700.0 L935.0,700.0 L975.0,740.0 L975.0,770.0" stroke="green" stroke-width="25.0" fill="none" />
+<path d="M875.0,730.0 L875.0,760.0 L775.0,840.0 L775.0,1060.0 L675.0,1140.0 L675.0,1170.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M875.0,670.0 L875.0,640.0 L1015.0,500.0 L1135.0,500.0 L1375.0,740.0 L1375.0,770.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M1075.0,530.0 L1075.0,560.0 L1175.0,840.0 L1175.0,1060.0 L1175.0,1040.0 L1175.0,1070.0" stroke="blue" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M1075.0,470.0 L1075.0,440.0 L1115.0,400.0 L1235.0,400.0 L1675.0,840.0 L1675.0,900.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M1175.0,430.0 L1175.0,460.0 L1575.0,840.0 L1575.0,1060.0 L1575.0,1040.0 L1575.0,1070.0" stroke="green" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M475.0,900.0 L475.0,840.0 L1015.0,300.0 L1135.0,300.0 L1175.0,340.0 L1175.0,370.0" stroke="green" stroke-width="25.0" fill="none" />
+<path d="M1075.0,330.0 L1075.0,360.0 L575.0,840.0 L575.0,1060.0 L575.0,1040.0 L575.0,1070.0" stroke="blue" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M275.0,900.0 L275.0,840.0 L915.0,200.0 L1035.0,200.0 L1075.0,240.0 L1075.0,270.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M975.0,230.0 L975.0,260.0 L375.0,840.0 L375.0,1060.0 L475.0,1340.0 L475.0,1370.0" stroke="blue" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M75.0,900.0 L75.0,840.0 L815.0,100.0 L935.0,100.0 L975.0,140.0 L975.0,170.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M875.0,130.0 L875.0,160.0 L175.0,840.0 L175.0,1060.0 L175.0,1040.0 L175.0,1070.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M75.0,1000.0 L75.0,1060.0 L115.0,1100.0 L235.0,1100.0 L275.0,1060.0 L275.0,1000.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M475.0,1000.0 L475.0,1060.0 L515.0,1100.0 L635.0,1100.0 L675.0,1060.0 L675.0,1000.0" stroke="green" stroke-width="25.0" fill="none" />
+<path d="M575.0,1130.0 L575.0,1160.0 L615.0,1200.0 L735.0,1200.0 L875.0,1060.0 L875.0,1000.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M1075.0,1000.0 L1075.0,1060.0 L1115.0,1100.0 L1235.0,1100.0 L1275.0,1060.0 L1275.0,1000.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M1475.0,1000.0 L1475.0,1060.0 L1515.0,1100.0 L1635.0,1100.0 L1675.0,1060.0 L1675.0,1000.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M175.0,1130.0 L175.0,1160.0 L415.0,1400.0 L535.0,1400.0 L675.0,1260.0 L675.0,1230.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M475.0,1430.0 L475.0,1460.0 L615.0,1600.0 L735.0,1600.0 L1175.0,1160.0 L1175.0,1130.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M675.0,1630.0 L675.0,1660.0 L815.0,1800.0 L935.0,1800.0 L1575.0,1160.0 L1575.0,1130.0" stroke="green" stroke-width="25.0" fill="none" />
+<path d="M875.0,70.0 L875.0,-50.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M875.0,1830.0 L875.0,1950.0" stroke="red" stroke-width="25.0" fill="none" />
+</svg>

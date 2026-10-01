@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="550.0" height="700.0" viewBox="0 0 550.0 700.0">
+<defs>
+</defs>
+<path d="M75.0,300.0 L75.0,400.0" stroke="blue" stroke-width="25.0" />
+<path d="M275.0,300.0 L275.0,400.0" stroke="green" stroke-width="25.0" />
+<path d="M475.0,300.0 L475.0,400.0" stroke="green" stroke-width="25.0" />
+<path d="M275.0,300.0 L275.0,240.0 L315.0,200.0 L435.0,200.0 L475.0,240.0 L475.0,300.0" stroke="green" stroke-width="25.0" fill="none" />
+<path d="M375.0,230.0 L375.0,260.0 L375.0,240.0 L375.0,460.0 L375.0,440.0 L375.0,470.0" stroke="blue" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M75.0,300.0 L75.0,240.0 L215.0,100.0 L335.0,100.0 L375.0,140.0 L375.0,170.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M275.0,130.0 L275.0,160.0 L175.0,240.0 L175.0,460.0 L275.0,540.0 L275.0,570.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M275.0,400.0 L275.0,460.0 L315.0,500.0 L435.0,500.0 L475.0,460.0 L475.0,400.0" stroke="green" stroke-width="25.0" fill="none" />
+<path d="M75.0,400.0 L75.0,460.0 L215.0,600.0 L335.0,600.0 L375.0,560.0 L375.0,530.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M275.0,70.0 L275.0,-50.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M275.0,630.0 L275.0,750.0" stroke="red" stroke-width="25.0" fill="none" />
+</svg>

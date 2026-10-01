@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="950.0" height="1100.0" viewBox="0 0 950.0 1100.0">
+<defs>
+</defs>
+<path d="M75.0,500.0 L75.0,600.0" stroke="blue" stroke-width="25.0" />
+<path d="M275.0,500.0 L275.0,600.0" stroke="blue" stroke-width="25.0" />
+<path d="M475.0,500.0 L475.0,600.0" stroke="blue" stroke-width="25.0" />
+<path d="M675.0,500.0 L675.0,600.0" stroke="blue" stroke-width="25.0" />
+<path d="M875.0,500.0 L875.0,600.0" stroke="blue" stroke-width="25.0" />
+<path d="M75.0,500.0 L75.0,440.0 L115.0,400.0 L235.0,400.0 L275.0,440.0 L275.0,500.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M175.0,430.0 L175.0,460.0 L175.0,440.0 L175.0,660.0 L475.0,940.0 L475.0,970.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M475.0,500.0 L475.0,440.0 L515.0,400.0 L635.0,400.0 L675.0,440.0 L675.0,500.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M575.0,430.0 L575.0,460.0 L575.0,440.0 L575.0,660.0 L575.0,840.0 L575.0,870.0" stroke="blue" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M575.0,370.0 L575.0,340.0 L615.0,300.0 L735.0,300.0 L875.0,440.0 L875.0,500.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M675.0,330.0 L675.0,360.0 L775.0,440.0 L775.0,660.0 L775.0,640.0 L775.0,670.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M175.0,370.0 L175.0,340.0 L415.0,100.0 L535.0,100.0 L675.0,240.0 L675.0,270.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M475.0,130.0 L475.0,160.0 L375.0,440.0 L375.0,660.0 L375.0,640.0 L375.0,670.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M275.0,600.0 L275.0,660.0 L315.0,700.0 L435.0,700.0 L475.0,660.0 L475.0,600.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M675.0,600.0 L675.0,660.0 L715.0,700.0 L835.0,700.0 L875.0,660.0 L875.0,600.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M375.0,730.0 L375.0,760.0 L515.0,900.0 L635.0,900.0 L775.0,760.0 L775.0,730.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M75.0,600.0 L75.0,660.0 L415.0,1000.0 L535.0,1000.0 L575.0,960.0 L575.0,930.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M475.0,70.0 L475.0,-50.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M475.0,1030.0 L475.0,1150.0" stroke="red" stroke-width="25.0" fill="none" />
+</svg>

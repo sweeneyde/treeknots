@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="350.0" height="500.0" viewBox="0 0 350.0 500.0">
+<defs>
+</defs>
+<path d="M75.0,200.0 L75.0,300.0" stroke="blue" stroke-width="25.0" />
+<path d="M275.0,200.0 L275.0,300.0" stroke="blue" stroke-width="25.0" />
+<path d="M75.0,200.0 L75.0,140.0 L115.0,100.0 L235.0,100.0 L275.0,140.0 L275.0,200.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M175.0,130.0 L175.0,160.0 L175.0,140.0 L175.0,360.0 L175.0,340.0 L175.0,370.0" stroke="red" stroke-width="25.0" fill="none" stroke-dasharray="30,10" />
+<path d="M75.0,300.0 L75.0,360.0 L115.0,400.0 L235.0,400.0 L275.0,360.0 L275.0,300.0" stroke="blue" stroke-width="25.0" fill="none" />
+<path d="M175.0,70.0 L175.0,-50.0" stroke="red" stroke-width="25.0" fill="none" />
+<path d="M175.0,430.0 L175.0,550.0" stroke="red" stroke-width="25.0" fill="none" />
+</svg>
