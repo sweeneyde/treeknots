@@ -1,5 +1,9 @@
 # Create Knots from pairs of binary trees
 
+Much of this repository is based on
+[this repository from 2020-2021](https://github.com/sweeneyde/thompson_knots/),
+but rewritten and reorganized in September 2026.
+
 In 2014, Vaughan Jones developed a method to produce knots/links
 from elements of Thompson's group *F*. Such elements can be represented
 as pairs of binary trees, and showed that all links arise in this way.
@@ -32,5 +36,17 @@ for tree-pairs with small numbers of leaves. These were generated with
 commands like following:
 
 ```
-(sage) ~/treeknots$ python -m treeknots.generate_data 7 -p
+python -m treeknots.generate_data 7 -p
+```
+
+The files `prime_knots_summary.md` and `prime_links_summary` list
+some minimal tree-pairs representing each knot/link found.
+These were generated with commands similar to the following:
+```
+python -m treeknots.get_knotinfo ./data/treepairs11op_sample.txt.gz
+```
+
+The `images` contains images of link diagrams generated like so:
+```
+python -m treeknots.drawing
 ```
