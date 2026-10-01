@@ -39,14 +39,14 @@ commands like following:
 python -m treeknots.generate_data 7 -p
 ```
 
-The files `prime_knots_summary.md` and `prime_links_summary` list
+The files `prime_knots_summary.md` and `prime_links_summary.md` list
 some minimal tree-pairs representing each knot/link found.
 These were generated with commands similar to the following:
 ```
 python -m treeknots.get_knotinfo ./data/treepairs11op_sample.txt.gz
 ```
 
-The `images` contains images of link diagrams generated like so:
+The `images` folder contains images of link diagrams generated like so:
 ```
 python -m treeknots.drawing
 ```
