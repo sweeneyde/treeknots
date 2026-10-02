@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="285.0" height="330.0" viewBox="0 0 285.0 330.0">
+<defs>
+</defs>
+<path d="M22.5,150.0 L22.5,180.0" stroke="blue" stroke-width="7.5" />
+<path d="M82.5,150.0 L82.5,180.0" stroke="blue" stroke-width="7.5" />
+<path d="M142.5,150.0 L142.5,180.0" stroke="blue" stroke-width="7.5" />
+<path d="M202.5,150.0 L202.5,180.0" stroke="blue" stroke-width="7.5" />
+<path d="M262.5,150.0 L262.5,180.0" stroke="blue" stroke-width="7.5" />
+<path d="M22.5,150.0 L22.5,132.0 L34.5,120.0 L70.5,120.0 L82.5,132.0 L82.5,150.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M52.5,129.0 L52.5,138.0 L52.5,132.0 L52.5,198.0 L112.5,252.0 L112.5,261.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M202.5,150.0 L202.5,132.0 L214.5,120.0 L250.5,120.0 L262.5,132.0 L262.5,150.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M232.5,129.0 L232.5,138.0 L232.5,132.0 L232.5,198.0 L142.5,282.0 L142.5,291.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M142.5,150.0 L142.5,132.0 L184.5,90.0 L220.5,90.0 L232.5,102.0 L232.5,111.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M202.5,99.0 L202.5,108.0 L172.5,132.0 L172.5,198.0 L142.5,222.0 L142.5,231.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M52.5,111.0 L52.5,102.0 L124.5,30.0 L160.5,30.0 L202.5,72.0 L202.5,81.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M142.5,39.0 L142.5,48.0 L112.5,132.0 L112.5,198.0 L112.5,192.0 L112.5,201.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M82.5,180.0 L82.5,198.0 L94.5,210.0 L130.5,210.0 L142.5,198.0 L142.5,180.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M112.5,219.0 L112.5,228.0 L124.5,240.0 L160.5,240.0 L202.5,198.0 L202.5,180.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M22.5,180.0 L22.5,198.0 L94.5,270.0 L130.5,270.0 L142.5,258.0 L142.5,249.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M112.5,279.0 L112.5,288.0 L124.5,300.0 L160.5,300.0 L262.5,198.0 L262.5,180.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M142.5,21.0 L142.5,-15.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M142.5,309.0 L142.5,345.0" stroke="blue" stroke-width="7.5" fill="none" />
+</svg>

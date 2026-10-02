@@ -310,6 +310,10 @@ def main():
                   filename="after_restack",
                   colors=("blue",))
 
+    draw_treepair(TreePair("((oo)(o(oo)))",
+                           "((o((oo)o))o)"),
+                           filename="other_trefoil")
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) == 2:
