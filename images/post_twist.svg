@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="345.0" height="390.0" viewBox="0 0 345.0 390.0">
+<defs>
+</defs>
+<path d="M22.5,180.0 L22.5,210.0" stroke="blue" stroke-width="7.5" />
+<path d="M82.5,180.0 L82.5,210.0" stroke="blue" stroke-width="7.5" />
+<path d="M142.5,180.0 L142.5,210.0" stroke="blue" stroke-width="7.5" />
+<path d="M202.5,180.0 L202.5,210.0" stroke="blue" stroke-width="7.5" />
+<path d="M262.5,180.0 L262.5,210.0" stroke="green" stroke-width="7.5" />
+<path d="M322.5,180.0 L322.5,210.0" stroke="green" stroke-width="7.5" />
+<path d="M22.5,180.0 L22.5,162.0 L34.5,150.0 L70.5,150.0 L82.5,162.0 L82.5,180.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M52.5,159.0 L52.5,168.0 L52.5,162.0 L52.5,228.0 L142.5,312.0 L142.5,321.0" stroke="green" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M262.5,180.0 L262.5,162.0 L274.5,150.0 L310.5,150.0 L322.5,162.0 L322.5,180.0" stroke="green" stroke-width="7.5" fill="none" />
+<path d="M292.5,159.0 L292.5,168.0 L292.5,162.0 L292.5,228.0 L172.5,342.0 L172.5,351.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M202.5,180.0 L202.5,162.0 L244.5,120.0 L280.5,120.0 L292.5,132.0 L292.5,141.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M262.5,129.0 L262.5,138.0 L232.5,162.0 L232.5,228.0 L202.5,252.0 L202.5,261.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M142.5,180.0 L142.5,162.0 L214.5,90.0 L250.5,90.0 L262.5,102.0 L262.5,111.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M232.5,99.0 L232.5,108.0 L172.5,162.0 L172.5,228.0 L172.5,222.0 L172.5,231.0" stroke="green" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M52.5,141.0 L52.5,132.0 L154.5,30.0 L190.5,30.0 L232.5,72.0 L232.5,81.0" stroke="green" stroke-width="7.5" fill="none" />
+<path d="M172.5,39.0 L172.5,48.0 L112.5,162.0 L112.5,228.0 L172.5,282.0 L172.5,291.0" stroke="blue" stroke-width="7.5" fill="none" stroke-dasharray="20,10" />
+<path d="M142.5,210.0 L142.5,228.0 L154.5,240.0 L190.5,240.0 L202.5,228.0 L202.5,210.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M172.5,249.0 L172.5,258.0 L184.5,270.0 L220.5,270.0 L262.5,228.0 L262.5,210.0" stroke="green" stroke-width="7.5" fill="none" />
+<path d="M82.5,210.0 L82.5,228.0 L154.5,300.0 L190.5,300.0 L202.5,288.0 L202.5,279.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M22.5,210.0 L22.5,228.0 L124.5,330.0 L160.5,330.0 L172.5,318.0 L172.5,309.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M142.5,339.0 L142.5,348.0 L154.5,360.0 L190.5,360.0 L322.5,228.0 L322.5,210.0" stroke="green" stroke-width="7.5" fill="none" />
+<path d="M172.5,21.0 L172.5,-15.0" stroke="blue" stroke-width="7.5" fill="none" />
+<path d="M172.5,369.0 L172.5,405.0" stroke="blue" stroke-width="7.5" fill="none" />
+</svg>

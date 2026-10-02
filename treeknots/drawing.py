@@ -269,6 +269,47 @@ def main():
     draw_treepair_trees_only(K4_1_insertions,
                   filename="4_1_with_insertions_trees")
 
+    # L6n1
+    pre_tuck = TreePair("(o(((oo)o)((oo)o)))",
+                        "((oo)((o(oo))(oo)))")
+    draw_treepair(pre_tuck, filename="pre_tuck",
+                  colors=("blue", "black", "red"))
+    post_tuck = TreePair("(o((o(((oo)o)o))((oo)o)))",
+                         "((o((oo)o))((o(oo))(oo)))")
+    draw_treepair(post_tuck, filename="post_tuck",
+                   colors=("blue", "black", "red"))
+
+    # 2leaf_post_tuck
+    draw_treepair(TreePair("(o((oo)o))",
+                           "(((oo)o)o)"),
+                  filename="2leaf_post_tuck",
+                  colors=("red", "blue"))
+
+    draw_treepair(TreePair("((oo)((oo)o))",
+                           "((o(oo))(oo))"),
+                  filename="pre_twist",
+                  colors=("blue", "green"))
+    draw_treepair(TreePair("((oo)(o(o(oo))))",
+                           "((o(o((oo)o)))o)"),
+                  filename="post_twist",
+                  colors=("blue", "green"))
+
+    draw_treepair(TreePair("(oo)","(oo)"),
+                  filename="2leaf_blue_green",
+                  colors=("green","blue"))
+    draw_treepair(TreePair("((oo)((o(oo))o))","((o(o(oo)))(oo))"),
+                  filename="post_thatch",
+                  colors=("blue","green"))
+
+    draw_treepair(TreePair("(((oo)o)(oo))",
+                           "((o((oo)o))o)"),
+                  filename="before_restack",
+                  colors=("blue",))
+    draw_treepair(TreePair("((oo)(o(oo)))",
+                           "((o(o(oo)))o)"),
+                  filename="after_restack",
+                  colors=("blue",))
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) == 2:
