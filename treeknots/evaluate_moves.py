@@ -204,6 +204,22 @@ if __name__ == "__main__":
         allow_pastings=False,
     )
     multiple_evaluations(
+        start=7,
+        max_intermediate_leaves=8,
+        knot_type="0_1",
+        flags="",
+        allow_reflections=False,
+        allow_pastings=False,
+    )
+    multiple_evaluations(
+        start=8,
+        max_intermediate_leaves=8,
+        knot_type="0_1",
+        flags="",
+        allow_reflections=False,
+        allow_pastings=False,
+    )
+    multiple_evaluations(
         start=5,
         max_intermediate_leaves=8,
         knot_type="3_1",
