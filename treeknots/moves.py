@@ -76,13 +76,13 @@ def subsquare_moves(tp):
         if is_known_trivial_word_pair(*subsquare_word_pair):
             yield TreePair(*sans_subsquare_word_pair)
 
-def local_move_1(tp):
+def move_thatch(tp):
     """
     >>> tp = TreePair("(((oo)o)((o(oo))o))", "(o((o(o(oo)))(oo)))")
-    >>> [tp1.to_words() for tp1 in local_move_1(tp)]
+    >>> [tp1.to_words() for tp1 in move_thatch(tp)]
     [('(((oo)o)((oo)o))', '(o((o(oo))(oo)))')]
     >>> tp = TreePair("(o((o(oo))o))", "((o((oo)o))o)")
-    >>> [tp1.to_words() for tp1 in local_move_1(tp)]
+    >>> [tp1.to_words() for tp1 in move_thatch(tp)]
     []
     """
     # labelled #2 in my google doc
@@ -110,19 +110,19 @@ def local_move_1(tp):
                 copy.relink_corresponding_and_parents()
                 yield copy
 
-def local_move_2(tp):
+def move_tuck(tp):
     """
     >>> tp = TreePair("((o((oo)(oo)))o)", "((((oo)o)o)(oo))")
-    >>> [tp1.to_words() for tp1 in local_move_2(tp)]
+    >>> [tp1.to_words() for tp1 in move_tuck(tp)]
     [('((o(oo))o)', '((oo)(oo))')]
     >>> tp = TreePair("(o((((oo)o)(oo))o))", "(((oo)o)((oo)(oo)))")
-    >>> [tp1.to_words() for tp1 in local_move_2(tp)]
+    >>> [tp1.to_words() for tp1 in move_tuck(tp)]
     [('(((oo)(oo))o)', '(o((oo)(oo)))')]
     >>> tp = TreePair("(o(oo))", "((oo)o)")
-    >>> [tp1.to_words() for tp1 in local_move_2(tp)]
+    >>> [tp1.to_words() for tp1 in move_tuck(tp)]
     [('o', 'o')]
     >>> tp = TreePair("((oo)(oo))", "(o((oo)o))")
-    >>> [tp1.to_words() for tp1 in local_move_2(tp)]
+    >>> [tp1.to_words() for tp1 in move_tuck(tp)]
     []
     """
     # labelled #5 in my google doc
@@ -149,10 +149,10 @@ def local_move_2(tp):
                 copy.relink_corresponding_and_parents()
                 yield copy
 
-def local_move_3(tp):
+def move_twist(tp):
     """
     >>> tp = TreePair("(o((o(o(oo)))o))", "((o((oo)o))(oo))")
-    >>> [tp1.to_words() for tp1 in local_move_3(tp)]
+    >>> [tp1.to_words() for tp1 in move_twist(tp)]
     [('(o(((oo)o)o))', '((oo)((oo)o))')]
     """
     # labelled #7 in my google doc
@@ -182,13 +182,13 @@ def local_move_3(tp):
                 copy.relink_corresponding_and_parents()
                 yield copy
 
-def local_move_4(tp):
+def move_restack(tp):
     """
     >>> tp = TreePair('(o(oo))', '(o(oo))')
-    >>> [tp1.to_words() for tp1 in local_move_4(tp)]
+    >>> [tp1.to_words() for tp1 in move_restack(tp)]
     [('((oo)o)', '((oo)o)')]
     >>> tp = TreePair("((o(o(oo)))o)", "((oo)(o(oo)))")
-    >>> [tp1.to_words() for tp1 in local_move_4(tp)]
+    >>> [tp1.to_words() for tp1 in move_restack(tp)]
     [('((o((oo)o))o)', '(((oo)o)(oo))')]
     """
     # labelled #10 in my google doc
@@ -215,10 +215,10 @@ def local_move_4(tp):
             copy.relink_corresponding_and_parents()
             yield copy
 
-def local_move_5(tp):
+def move_twiddle(tp):
     """
     >>> tp = TreePair('(o((o(oo))(oo)))', '(o((oo)((oo)o)))')
-    >>> [tp1.to_words() for tp1 in local_move_5(tp)]
+    >>> [tp1.to_words() for tp1 in move_twiddle(tp)]
     [('(o(oo))', '(o(oo))')]
     """
     # labelled #9 in my google doc
@@ -336,25 +336,26 @@ def global_move_2(tp):
 MOVES = [
     global_move_1,
     global_move_2,
-    local_move_1,
-    local_move_2,
-    local_move_3,
-    local_move_4,
-    local_move_5,
+    move_thatch,
+    move_tuck,
+    move_twist,
+    move_restack,
+    move_twiddle,
+    # subsquare_moves,
 ]
 
 SHRINKING_MOVES = [
     global_move_2,
-    local_move_1,
-    local_move_2,
-    local_move_3,
-    local_move_5,
+    move_thatch,
+    move_tuck,
+    move_twist,
+    move_twiddle,
+    # subsquare_moves,
 ]
 
 def all_moves_with_reflections(tp):
     yield mirror_across_trees(tp)
     yield mirror_left_right(tp)
-    yield from subsquare_moves(tp)
     for moves in MOVES:
         yield from moves(tp)
 
@@ -372,7 +373,6 @@ def _moves_no_reflections(tp, moves_list):
 
 def all_moves_no_reflections(tp):
     yield mirror_left_right(mirror_across_trees(tp))
-    yield from subsquare_moves(tp)
     yield from _moves_no_reflections(tp, MOVES)
 
 def quick_test_maximality(tp):
