@@ -198,7 +198,6 @@ def draw_treepair_trees_only(
     n2p1 = tree_node_to_position(tp.tree1)
     n2p2 = tree_node_to_position(tp.tree2)
     n2p = {}
-    components = assign_components(tp)
     for v, (x, y) in n2p1.items():
         n2p[v] = (x0+DIST*x, y0 - LEAF_SEP - SLOPE*DIST*y)
     for v, (x, y) in n2p2.items():
@@ -257,6 +256,18 @@ def main():
     draw("borromean",
          "(o(o(o(((o(oo))(oo))o))))",
          "((((oo)((oo)o))(oo))(oo))")
+
+    K4_1 = TreePair("(o(o((oo)((oo)o))))",
+                    "(((oo)o)((oo)(oo)))")
+    K4_1_insertions = TreePair("(o((oo)((o(oo))((o(o(oo)))o))))",
+                               "(((o(oo))o)(((oo)o)(((oo)o)o)))")
+    draw_treepair(K4_1, filename="4_1_black", colors=("black",))
+    draw_treepair_trees_only(K4_1, filename="4_1_trees")
+    draw_treepair(K4_1_insertions,
+                  filename="4_1_with_insertions",
+                  colors=("black", "blue", "red"))
+    draw_treepair_trees_only(K4_1_insertions,
+                  filename="4_1_with_insertions_trees")
 
 if __name__ == "__main__":
     import sys

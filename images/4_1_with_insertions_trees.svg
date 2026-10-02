@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="645.0" height="690.0" viewBox="0 0 645.0 690.0">
+<defs>
+</defs>
+<circle cx="22.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="142.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="202.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="262.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="322.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="382.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="442.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="502.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="562.5" cy="330.0" r="7.5" fill="black" />
+<circle cx="622.5" cy="330.0" r="7.5" fill="black" />
+<path d="M82.5,330.0 L112.5,300.0 L142.5,330.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M262.5,330.0 L292.5,300.0 L322.5,330.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M502.5,330.0 L532.5,300.0 L562.5,330.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M202.5,330.0 L262.5,270.0 L292.5,300.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M442.5,330.0 L502.5,270.0 L532.5,300.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M382.5,330.0 L472.5,240.0 L502.5,270.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M472.5,240.0 L502.5,210.0 L622.5,330.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M262.5,270.0 L412.5,120.0 L502.5,210.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M112.5,300.0 L352.5,60.0 L412.5,120.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M22.5,330.0 L322.5,30.0 L352.5,60.0" stroke="black" stroke-width="7.5" fill="none" />
+<circle cx="22.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="142.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="202.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="262.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="322.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="382.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="442.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="502.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="562.5" cy="360.0" r="7.5" fill="black" />
+<circle cx="622.5" cy="360.0" r="7.5" fill="black" />
+<path d="M82.5,360.0 L112.5,390.0 L142.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M262.5,360.0 L292.5,390.0 L322.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M292.5,390.0 L322.5,420.0 L382.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M442.5,360.0 L472.5,390.0 L502.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M472.5,390.0 L502.5,420.0 L562.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M502.5,420.0 L532.5,450.0 L622.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M22.5,360.0 L82.5,420.0 L112.5,390.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M82.5,420.0 L112.5,450.0 L202.5,360.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M322.5,420.0 L442.5,540.0 L532.5,450.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M112.5,450.0 L322.5,660.0 L442.5,540.0" stroke="black" stroke-width="7.5" fill="none" />
+</svg>

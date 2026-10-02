@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="405.0" height="450.0" viewBox="0 0 405.0 450.0">
+<defs>
+</defs>
+<circle cx="22.5" cy="210.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="210.0" r="7.5" fill="black" />
+<circle cx="142.5" cy="210.0" r="7.5" fill="black" />
+<circle cx="202.5" cy="210.0" r="7.5" fill="black" />
+<circle cx="262.5" cy="210.0" r="7.5" fill="black" />
+<circle cx="322.5" cy="210.0" r="7.5" fill="black" />
+<circle cx="382.5" cy="210.0" r="7.5" fill="black" />
+<path d="M142.5,210.0 L172.5,180.0 L202.5,210.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M262.5,210.0 L292.5,180.0 L322.5,210.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M292.5,180.0 L322.5,150.0 L382.5,210.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M172.5,180.0 L262.5,90.0 L322.5,150.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M82.5,210.0 L232.5,60.0 L262.5,90.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M22.5,210.0 L202.5,30.0 L232.5,60.0" stroke="black" stroke-width="7.5" fill="none" />
+<circle cx="22.5" cy="240.0" r="7.5" fill="black" />
+<circle cx="82.5" cy="240.0" r="7.5" fill="black" />
+<circle cx="142.5" cy="240.0" r="7.5" fill="black" />
+<circle cx="202.5" cy="240.0" r="7.5" fill="black" />
+<circle cx="262.5" cy="240.0" r="7.5" fill="black" />
+<circle cx="322.5" cy="240.0" r="7.5" fill="black" />
+<circle cx="382.5" cy="240.0" r="7.5" fill="black" />
+<path d="M22.5,240.0 L52.5,270.0 L82.5,240.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M52.5,270.0 L82.5,300.0 L142.5,240.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M202.5,240.0 L232.5,270.0 L262.5,240.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M322.5,240.0 L352.5,270.0 L382.5,240.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M232.5,270.0 L292.5,330.0 L352.5,270.0" stroke="black" stroke-width="7.5" fill="none" />
+<path d="M82.5,300.0 L202.5,420.0 L292.5,330.0" stroke="black" stroke-width="7.5" fill="none" />
+</svg>
